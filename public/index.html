@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Williams Sonoma</title>
+  <script src="https://code.angularjs.org/1.5.8/angular.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body ng-controller="pageController">
+  <div class="wrapper" ng-class="{ disabled: showConfirm }">
+    <header>
+      <div class="branding">
+        <img src="assets/logo.png"/>
+      </div>
+
+      <nav>
+        <nav-bar></nav-bar>
+      </nav>
+    </header>
+
+    <main>
+      <div class="left-panel">
+        <image-swapper></image-swapper>
+      </div>
+
+      <div class="right-panel">
+        <img class="button-confirm" src="assets/button-add-to-cart.png" ng-click="doShowConfirm(true)"/>
+        <expandable-paragraphs></expandable-paragraphs>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-confirm" ng-show="showConfirm">
+    Item added to cart!
+    <div class="close-model" ng-click="doShowConfirm(false)">x</div>
+  </div>
+
+  <script src="js/scripts.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/components/navBar.component.js"></script>
+  <script src="js/components/imageSwapper.component.js"></script>
+  <script src="js/components/expandableParagraphs.component.js"></script>
+  
+</body>
+
+</html>
