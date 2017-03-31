@@ -21,5 +21,6 @@ app.component('expandableParagraphs', {
 			</p>
 			<p class="copy-text">{{ $ctrl.copyText }}</p>
 		</li>
+		</ul>
 	`
 })
